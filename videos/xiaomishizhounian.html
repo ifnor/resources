@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>【一往无前】小米十周年 雷军公开演讲|全程录制</title> 
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<!-- Or if you want a more recent canary version -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script> -->
+<video id="video"></video>
+<script>
+  var video = document.getElementById('video');
+  if(Hls.isSupported()) {
+    var hls = new Hls();
+    hls.loadSource('https://alcdn.hls.xiaoka.tv/2020811/b92/dbd/Hng-TieZgHTyZ-xY/index.m3u8');
+    hls.attachMedia(video);
+    hls.on(Hls.Events.MANIFEST_PARSED,function() {
+      video.play();
+  });
+ } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = 'https://alcdn.hls.xiaoka.tv/2020811/b92/dbd/Hng-TieZgHTyZ-xY/index.m3u8';
+    video.addEventListener('loadedmetadata',function() {
+      video.play();
+    });
+  }
+</script>
+</body>
+</html>
