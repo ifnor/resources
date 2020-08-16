@@ -1,3 +1,17 @@
+[Adblock Plus 3.1]
+! 
+! Version: 2020.08.16
+! Title: 国内视频广告规则
+! Last modified: 16 Aug 2020 01：00 UTC
+! Expires: 1 hours (update frequency)
+! Homepage: https://ifdo.ml
+!
+! Filter list designed to fight circumvention ads in Adblock Plus
+!
+! 
+! *** Fetched from: https://src.ifdo.ml/videorules.txt ***
+! MISC
+
 ! 腾讯视频 https://v.qq.com
 v.qq.com##.txp_btn_popup.txp_btn
 v.qq.com##.ft_cell_vcoin.ft_cell
